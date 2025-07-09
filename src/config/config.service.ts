@@ -51,4 +51,16 @@ export class AppConfigService {
   get imgbbAlbumId(): string {
     return this.configService.get<string>('IMGBB_ALBUM_ID')!;
   }
+
+  get kafkaBroker(): string {
+    return this.configService.get<string>('KAFKA_BROKER')!;
+  }
+
+  get kafkaClientId(): string {
+    return this.configService.get<string>('KAFKA_CLIENT_ID')!;
+  }
+
+  get kafkaAasTopic(): string {
+    return this.configService.get<string>('KAFKA_AAS_TOPIC')!;
+  }
 }

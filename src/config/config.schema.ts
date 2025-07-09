@@ -15,4 +15,7 @@ export const configSchema = Joi.object({
   SENTRY_DSN: Joi.string().uri().required(),
   IMGBB_API_KEY: Joi.string().required(),
   IMGBB_ALBUM_ID: Joi.string().required(),
+  KAFKA_BROKER: Joi.string().uri().default('localhost:9092'),
+  KAFKA_CLIENT_ID: Joi.string().required(),
+  KAFKA_AAS_TOPIC: Joi.string().default('user-parameters'),
 });
